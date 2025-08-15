@@ -14,7 +14,72 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      admin_users: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      case_reports: {
+        Row: {
+          age_group: string
+          created_at: string
+          district: string
+          gender: string
+          id: string
+          mandal: string
+          notes: string | null
+          phone_number: string
+          reporter_name: string
+          symptoms: string[]
+          updated_at: string
+          village: string
+        }
+        Insert: {
+          age_group: string
+          created_at?: string
+          district: string
+          gender: string
+          id?: string
+          mandal: string
+          notes?: string | null
+          phone_number: string
+          reporter_name: string
+          symptoms: string[]
+          updated_at?: string
+          village: string
+        }
+        Update: {
+          age_group?: string
+          created_at?: string
+          district?: string
+          gender?: string
+          id?: string
+          mandal?: string
+          notes?: string | null
+          phone_number?: string
+          reporter_name?: string
+          symptoms?: string[]
+          updated_at?: string
+          village?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
